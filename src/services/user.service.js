@@ -6,6 +6,11 @@ module.exports.list = async () => {
 };
 
 module.exports.setup = async () => {
-  let user = new User({ username: 'admin', password: hashSync('password', 2) });
+  let user = new User({
+    email: 'joris.sparla@gmail.com',
+    username: 'admin',
+    password: hashSync('password', 2),
+    role: 'admin'
+  });
   return await user.save();
 };
