@@ -22,7 +22,7 @@ module.exports = async function(req, res) {
   try {
     switch (req.url) {
       case '/':
-        send(res, 200, '<h1>Hallo</h1>');
+        send(res, 200, 'Hallo');
       case '/api/setup':
         send(res, 200, await users.setup());
         break;
